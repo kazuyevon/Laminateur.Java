@@ -16,8 +16,6 @@ public class DecoupeLaminateur {
 		String planBobineMere = "";
 		String pertes = "";
 		int nbBobinotParBobine = nbCouteaux - 1;
-
-
 		System.out.println("Calcul de patron de coupe");
 		/*System.out.println(" Nombres de laize différentes ?");
 		Scanner sc = new Scanner(System.in);
@@ -41,7 +39,6 @@ public class DecoupeLaminateur {
 		/**creer un tableau avec tous les bobinots*/
 		int[] listOrderBobinot = new int[nbBobinot];
 		int n = 0;/**sert a incrementer position orderTotale*/
-
 		/**remplit le tableau listOrderBobinot*/
 		for(int j=0; j<orderNbre.length; j++){
 			int coeff = orderNbre[j];
@@ -70,7 +67,6 @@ public class DecoupeLaminateur {
 		int countBobinot = 0;
 		int nbBobinotOrder = listOrderBobinot.length;
 		//System.out.println("bobinot le plus petit utilisable " + minLaizeOrder(listOrderBobinot, usedBobinot));
-
 		/**initialisation plan de coupe*/
 		planDeCoupe += "\n" + "        bobine : " + countBobine + ")";
 		planBobineMere += "bobine " + countBobine + "\n";
@@ -179,6 +175,7 @@ public class DecoupeLaminateur {
 		System.out.println("Nb de couteaux : \n" + nbCouteaux + " soit " + nbBobinotParBobine + " bobinots maxi par run.");
 		//System.out.println("bobinot le plus petit utilisable " + minLaizeOrder(listOrderBobinot, usedBobinot));
 	}
+	/**Création de fonction minLaizeOrder pour déterminer quel est le plus petit bobinot encore utilisable*/
 	public static int minLaizeOrder(int[] listOrderBobinot, int[] usedBobinot){
 		int result = 0;
 		int nbBobinot = listOrderBobinot.length;
